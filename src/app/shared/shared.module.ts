@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule, Optional, SkipSelf} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
@@ -12,4 +12,10 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+  constructor(@Optional() @SkipSelf() me: SharedModule) {
+    if (me) {
+      throw new Error('Shared Module should only be imported once');
+    }
+  }
+}
