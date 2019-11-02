@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:open": "ng serve -o",
     "build": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test",
@@ -22,7 +23,9 @@
     "@angular/router": "~8.2.13",
     "rxjs": "^6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "@angular/cdk": "latest",
+    "@angular/material": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.17",
