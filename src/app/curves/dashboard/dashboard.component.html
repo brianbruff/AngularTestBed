@@ -2,3 +2,12 @@
 
 
 <button (click)="showPopover($event.target)">Popover</button>
+
+<button (click)="showPopover2($event.target, tmpl)">Popover with template</button>
+
+
+
+
+<div #tmpl >
+  this is my content
+</div>

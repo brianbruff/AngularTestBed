@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 import {PopoverService} from '../../shared/popover/popover.service';
 import {DashboardPopoverComponent} from './dashboard-popover/dashboard-popover.component';
 
@@ -16,7 +16,10 @@ export class DashboardComponent implements OnInit {
 
   showPopover(target: EventTarget) {
     const element = target as HTMLElement;
+    this.showPopover2(target, element);
+  }
 
-    this.popoverService.open(DashboardPopoverComponent, element, {});
+  showPopover2(target: EventTarget, element: ElementRef | HTMLElement) {
+    this.popoverService.open(DashboardPopoverComponent, element, { });
   }
 }
